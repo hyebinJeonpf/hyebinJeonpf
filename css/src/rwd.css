@@ -1,0 +1,28 @@
+/*rwd.css*/
+
+body{background-color: #ccc; transition:all 300ms;}
+#wrap{transition:all 500ms;}
+/*mobile*/
+@media screen and (max-width:640px) {
+  body{background-color: #0af;}
+  #wrap{width: 100%; height: 500px; background-color: #cca;}
+}
+/*tablet*/
+@media screen and (min-width:641px) and (max-width:1024px) {
+  body{background-color: #c47;}
+  #wrap{width: 90%; height: 30vw;
+  /*가로화면의 %기준으로 처리 가로화면 전체의 30%만큼의 크기를 높이 값으로 설정하라*/
+  /*ex:디자인 작업시 가로 650px 사이즈에서 높이 100px만큼 작업;
+  공식:사용크기/기준(브라우저)*100 vw
+      100px / 650 * 100vw => 15.384615vw*/
+   margin:0 auto; background-color: #ca0;}
+}
+/*pc*/
+@media screen and (min-width:1025px) and (max-width:1366px) , print {
+  body{background-color: #a77;}
+  #wrap{width:960px; margin:0 auto; background-color: #fff; padding-top:1.3rem;} 
+}
+/*pcFull*/
+@media screen and (min-width:1367px) {
+  #wrap{width: 100%; height:50vw; background-color: #faa;}
+}
